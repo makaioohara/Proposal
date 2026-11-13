@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>For You 🌙</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <canvas id="bg"></canvas>
+    <div class="glow g1"></div>
+    <div class="glow g2"></div>
+    <div class="aurora" aria-hidden="true"></div>
+
+    <section class="page" id="p-moon">
+      <div class="moon"><i></i><i></i><i></i></div>
+      <p class="eyebrow">Tonight</p>
+      <h1>The Moon is <em>beautiful</em>,<br />isn’t it?</h1>
+      <button onclick="go('p-q')">It really is</button>
+    </section>
+
+    <section class="page" id="p-q">
+      <p class="eyebrow">A little question</p>
+      <h2>What if you had to see<br />the future <em>with me</em>?</h2>
+      <div class="opts">
+        <button onclick="go('p-thanks')">I would pass</button>
+        <button onclick="go('p-likes')">I can think about it</button>
+        <button onclick="go('p-thanks')">Idk</button>
+      </div>
+    </section>
+
+    <section class="page" id="p-thanks">
+      <p class="eyebrow">Thank you</p>
+      <h1>Have a <em>good day</em></h1>
+      <p>
+        Thank you for being honest, and for your time. I truly appreciate it.
+      </p>
+    </section>
+
+    <section class="page" id="p-likes">
+      <p class="eyebrow">Things I like about us</p>
+      <h2>The little things we share</h2>
+      <p class="hint">Tap each one</p>
+      <ul class="likes" id="likes"></ul>
+      <button onclick="go('p-l1')">Continue</button>
+    </section>
+
+    <section class="page" id="p-l1">
+      <article class="letter" id="l1">
+        <p class="page-number">Letter &bull; 1 of 4</p>
+        <h2>To You, Whom My Heart Has Already Chosen</h2>
+        <p>
+          I know this is a little awkward. Perhaps you're not ready for
+          something like this. Honestly, I don't even know when you will be, and
+          that's okay. I am not writing this because I expect you to have an
+          answer waiting for me. I'm writing because today, I've finally
+          gathered the courage to say everything I've been keeping trapped
+          inside.
+        </p>
+        <p>
+          What I'm about to do could change our friendship forever. It could
+          make things a little awkward between us, or perhaps, just perhaps,
+          take us somewhere neither of us has imagined yet. I understand that.
+          I've thought about it more times than I can count. But some feelings
+          become too beautiful to keep hidden, and I think mine have reached
+          that point.
+        </p>
+        <p>
+          I know you've been through things that have changed the way you look
+          at love. I know you've been hurt by people you trusted, disappointed
+          by people you gave chances to, and left with questions that perhaps
+          nobody ever bothered to answer. I know trusting someone again isn't as
+          simple as it sounds. Perhaps a part of you is afraid of experiencing
+          the same things all over again. Perhaps you believe you can never love
+          someone the way you once did.
+        </p>
+        <p>And I don't blame you for any of that.</p>
+        <p>
+          I won't ask you to forget your past, lower your walls overnight, or
+          pretend that everything you've experienced never happened. I don't
+          want to compete with your past or prove that I'm better than people
+          who hurt you. I simply want the opportunity to show you that not
+          everyone who enters your life intends to leave a scar.
+        </p>
+        <p>
+          I don't want to be another person you have to recover from. I'd rather
+          be someone you can breathe around.
+        </p>
+        <p>
+          If memory is the brain's way of preserving what matters, I think mine
+          has already made a rather permanent decision about you. Somewhere
+          between our conversations, your little habits, your words, and those
+          ordinary moments I somehow started looking forward to, you became a
+          thought I never had to force myself to remember.
+        </p>
+      </article>
+      <button onclick="go('p-l2')">Turn the page</button>
+    </section>
+
+    <section class="page" id="p-l2">
+      <article class="letter">
+        <p class="page-number">Letter &bull; 2 of 4</p>
+        <p>
+          And perhaps that's the simplest way I can describe it:
+          <strong
+            >you've become someone my heart looks for, even when my mind is
+            occupied with a thousand other things.</strong
+          >
+        </p>
+        <p>
+          I know I'm not perfect. I never was. There are probably things about
+          me you don't particularly like, and perhaps there are things you've
+          noticed but haven't felt comfortable telling me. I have my flaws, my
+          imperfections, and my own things to work on. I'm not going to pretend
+          otherwise. I don't want you to fall in love with an imaginary version
+          of me. I'd rather you know the real me, including the parts that still
+          need growing.
+        </p>
+        <p>But there's something I want you to know.</p>
+        <p>
+          I have learned that loving someone isn't just about saying beautiful
+          things. It's about remembering the little things, listening when they
+          have something to say, being patient when they don't, showing up when
+          things aren't convenient, and making someone feel valued even on the
+          most ordinary days.
+        </p>
+        <p>
+          I want to take care of you. I want to look out for you. I want to
+          celebrate your achievements, listen to your complaints, laugh at your
+          silly moments, and be there when life doesn't go according to plan. I
+          want to know the versions of you that the rest of the world rarely
+          gets to see: the sleepy you, the childish you, the irritated you, the
+          vulnerable you, and even the days when you don't feel like being
+          particularly lovable.
+        </p>
+        <p>
+          I don't need you to be happy all the time. You don't have to pretend
+          around me.
+        </p>
+      </article>
+      <button onclick="go('p-l3')">Turn the page</button>
+    </section>
+
+    <section class="page" id="p-l3">
+      <article class="letter">
+        <p class="page-number">Letter &bull; 3 of 4</p>
+        <p>And yes, let me get a few things out of the way, hehe.</p>
+        <ul>
+          <li>
+            I'm not someone who keeps a never-ending list of girls around just
+            for attention
+          </li>
+          <li>I'm honest</li>
+          <li>I keep minimal interactions with other females</li>
+          <li>I don't smoke.</li>
+          <li>
+            I try to be well-mannered, gentle, respectful, and considerate.
+          </li>
+          <li>
+            I want to respect your boundaries, including when it comes to
+            intimate or sexual conversations. I won't pressure you into anything
+            you're uncomfortable with.
+          </li>
+          <li>
+            I'm willing to be transparent about my life, communicate openly, and
+            reassure you when you need it. It's ok for me to share my passwords,
+            share screen anytime.
+          </li>
+          <li>You were always my top-priority.</li>
+          <li>
+            You'll have my attention, my time, my affection, and my effort.
+          </li>
+          <li>I am protective too, hehe.</li>
+          <li>
+            I have dreams I'm working towards, and I'd love to have someone
+            whose dreams I can support just as wholeheartedly.
+          </li>
+        </ul>
+        <p>
+          But I also want you to understand that love shouldn't feel like
+          surveillance, restrictions, or losing your independence. You deserve
+          your own space, your own identity, and the freedom to be yourself. I
+          want to build trust with you, not demand it from you.
+        </p>
+        <p>
+          And if there's one thing I could borrow from all the love letters ever
+          written, it would be this: I don't need a promise of forever from you.
+          I'd be grateful for the opportunity to begin with tomorrow.
+        </p>
+        <p>
+          <strong
+            >Deep down, I think I'm already in love with you. I love
+            you.</strong
+          >
+        </p>
+      </article>
+      <button onclick="go('p-l4')">Turn the page</button>
+    </section>
+
+    <section class="page" id="p-l4">
+      <article class="letter">
+        <p class="page-number">Letter &bull; 4 of 4</p>
+        <p>
+          I know how much weight those words carry. I haven't written them
+          casually, and I don't expect you to return them just because I've said
+          them. I know love cannot be demanded, negotiated, or earned through a
+          list of promises. It has to be felt freely.
+        </p>
+        <p>
+          I cannot promise that I'll never make mistakes. I cannot promise that
+          we'll never disagree or have difficult days. But I can promise to take
+          responsibility for my actions, communicate rather than disappear, and
+          never deliberately make you feel small for having feelings of your
+          own.
+        </p>
+        <p>
+          And now, after all these paragraphs, all these thoughts, and all this
+          courage I've somehow managed to gather, there's one question I've been
+          wanting to ask.
+        </p>
+        <p><strong>Would you let me be more than just a friend?</strong></p>
+        <p>
+          Would you give me the chance to court you, to love you, to care for
+          you, and to discover what we could become together?
+        </p>
+        <p>
+          I don't know what the future has written for either of us. But I'd
+          really love to find out what happens when two people choose to write a
+          little of it together.
+        </p>
+        <p>
+          You don't have to answer immediately. You don't have to force yourself
+          to feel something you're not ready to feel. Take your time. Think
+          about it. And whatever your answer may be, I hope you know that I
+          meant every word I've written here.
+        </p>
+        <p>
+          If this is where our story begins, I hope we give it the kind of
+          honesty that makes it worth remembering.
+        </p>
+        <p>
+          And if the stars were ever asked to record the things that made this
+          little corner of the universe beautiful, I hope they would remember
+          the day I finally found the courage to tell you about you.
+        </p>
+        <p>
+          <strong>With all the affection I've been keeping to myself,</strong>
+        </p>
+        <p class="sig">Someone who would really, really love to be yours.</p>
+      </article>
+      <button onclick="go('p-final')">One last thing</button>
+    </section>
+
+    <section class="page" id="p-final">
+      <p class="eyebrow">Final question</p>
+      <h1>
+        Would you let me be the person who gets to make you <em>smile</em> a
+        little more often?
+      </h1>
+      <div class="final-btns" id="fb">
+        <button id="no">NO</button>
+        <button id="yes">yes</button>
+      </div>
+      <div id="msg">Choose wisely…</div>
+    </section>
+
+    <section class="page" id="p-yes">
+      <p class="eyebrow">She said yes</p>
+      <h1>You just made my <em>whole year</em></h1>
+      <p id="yesText"></p>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
