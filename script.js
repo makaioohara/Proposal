@@ -166,7 +166,8 @@
         "It’s practically waving at you now.",
         "Last chance to be reasonable.",
       ];
-      let n = 0;
+      let n = 0,
+        yesClicks = 0;
       const yes = $("yes"),
         no = $("no");
       function burst(x, y, count) {
@@ -184,6 +185,10 @@
         }
       }
       no.onclick = () => {
+        if (yesClicks > 0) {
+          go("p-thanks");
+          return;
+        }
         if (n >= noLines.length) {
           go("p-thanks");
           return;
@@ -201,6 +206,15 @@
         yes.className = n >= 5 ? "lv3" : n >= 3 ? "lv2" : "lv1";
       };
       yes.onclick = () => {
+        yesClicks++;
+        if (yesClicks === 1) {
+          $("msg").textContent = "Are you sure?";
+          return;
+        }
+        if (yesClicks === 2) {
+          $("msg").textContent = "Are you absolutely sure? You can still choose NO.";
+          return;
+        }
         go("p-yes");
         for (let i = 0; i < 40; i++)
           setTimeout(
